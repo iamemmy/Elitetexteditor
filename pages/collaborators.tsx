@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import Dashboard from '../components/Home';
 
 const Home: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -58,8 +57,10 @@ const Home: React.FC = () => {
           </button>
         </aside>
 
-        <div className="w-full lg:w-[80%] p-4 lg:p-6">
-          <Dashboard />
+        <div className="w-full lg:w-[80%] h-[80vh] p-4 lg:p-6 flex justify-center items-center">
+            <div className="p-6 bg-gray-50 rounded-lg border border-gray-300 text-center w-[80%] lg:w-[50%]">
+                <p className="text-sm lg:text-base text-gray-600">No collaborators available</p>
+            </div>
         </div>
       </main>
     </div>
