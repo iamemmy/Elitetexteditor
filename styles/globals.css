@@ -2,32 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.quill-editor-container {
+  overflow: hidden;
+  -webkit-box-shadow: 0px 11px 21px -20px rgba(0,0,0,0.54);
+  -moz-box-shadow: 0px 11px 21px -20px rgba(0,0,0,0.54);
+  box-shadow: 0px 11px 21px -20px rgba(0,0,0,0.54);
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.quill-editor {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 0 0 4px 4px;
+  min-height: 50vh;
+  max-height: 70vh;
+  overflow-y: scroll;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.ql-editor {
+  min-height: 50vh;
+  max-height: 70vh;
+  overflow-y: scroll;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.ql-toolbar {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 0;
+  border-radius: 4px 4px 0 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Scrollbar Styling */
+.ql-toolbar::-webkit-scrollbar {
+  height: 4px;
+}
+
+.ql-toolbar::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.ql-toolbar::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.ql-toolbar::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+.ql-container {
+  background-color: #ffffff;
+}
+
+.access-btn {
+  margin-top: auto !important;
 }
