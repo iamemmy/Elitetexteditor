@@ -12,7 +12,7 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col h-screen bg-gray-100">
       <header className="bg-indigo-600 text-white p-4 shadow-md flex items-center justify-between">
-        <h1 className="text-xl lg:text-2xl font-semibold">Elite Text Editor</h1>
+        <h1 className="text-xl lg:text-2xl font-semibold">Elite X</h1>
         <button 
           className="lg:hidden text-white" 
           onClick={toggleSidebar}
