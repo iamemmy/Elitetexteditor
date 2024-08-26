@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import Profile from '../components/Profile';
+import Dashboard from '../components/Dashboard';
 
 const Home: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -62,7 +62,7 @@ const Home: React.FC = () => {
         </aside>
 
         <div className="w-full lg:w-[80%] p-4 lg:p-6">
-          <Profile />
+          <Dashboard />
         </div>
       </main>
     </div>

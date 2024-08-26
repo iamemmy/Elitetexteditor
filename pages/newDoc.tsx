@@ -11,7 +11,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="flex flex-col h-screen bg-gray-100">
-      <header className="bg-indigo-600 text-white p-4 shadow-md flex items-center justify-between">
+      <header className="bg-indigo-600 text-white px-4 py-4 lg:px-4 lg:py-2 shadow-md flex items-center justify-between">
         <h1 className="text-xl lg:text-2xl font-semibold">Elite X</h1>
         <button 
           className="lg:hidden text-white" 
@@ -36,6 +36,9 @@ const Home: React.FC = () => {
           <ul className="flex flex-col space-y-4 lg:space-y-2">
             <li className="hover:bg-gray-300 px-4 py-2 rounded-md cursor-pointer text-sm transition duration-300">
               <Link href={'/'} className="block w-full h-full">Home</Link>
+            </li>
+            <li className="hover:bg-gray-300 px-4 py-2 rounded-md cursor-pointer text-sm transition duration-300">
+              <Link href={'/dashboard'} className="block w-full h-full">Dashboard</Link>
             </li>
             <li className="hover:bg-gray-300 px-4 py-2 rounded-md cursor-pointer text-sm transition duration-300">
               <Link href={'/newDoc'} className="block w-full h-full">New Doc</Link>
