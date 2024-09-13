@@ -19,9 +19,9 @@ export const PrevArrow: React.FC<ArrowProps> = ({
       display: "block",
       background: "rgba(99, 102, 241, 1)",
       borderRadius: "50%",
-      width: "50px", // Adjusted size
-      height: "50px", // Adjusted size
-      lineHeight: "50px", // Adjusted to match width and height
+      width: "50px",
+      height: "50px",
+      lineHeight: "50px",
       color: "white",
       transition:
         "background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease",
@@ -45,9 +45,9 @@ export const NextArrow: React.FC<ArrowProps> = ({
       display: "block",
       background: "rgba(99, 102, 241, 1)",
       borderRadius: "50%",
-      width: "50px", // Adjusted size
-      height: "50px", // Adjusted size
-      lineHeight: "50px", // Adjusted to match width and height
+      width: "50px",
+      height: "50px",
+      lineHeight: "50px",
       color: "white",
       transition:
         "background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease",

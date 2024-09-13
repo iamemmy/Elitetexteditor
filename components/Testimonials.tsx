@@ -207,7 +207,7 @@ const Testimonials: React.FC = () => {
             <div className="relative mb-4">
               <FaQuoteLeft className="absolute text-indigo-500 text-4xl top-0 left-4 -translate-y-1/2" />
               <Image
-                src="/hero-bg.png"
+                src="/Me.png"
                 alt="Alex Johnson"
                 width={80}
                 height={80}
@@ -230,7 +230,7 @@ const Testimonials: React.FC = () => {
             <div className="relative mb-4">
               <FaQuoteLeft className="absolute text-indigo-500 text-4xl top-0 left-4 -translate-y-1/2" />
               <Image
-                src="/hero2.png"
+                src="/hero-bg.png"
                 alt="Jamie Lee"
                 width={80}
                 height={80}
@@ -253,7 +253,7 @@ const Testimonials: React.FC = () => {
             <div className="relative mb-4">
               <FaQuoteLeft className="absolute text-indigo-500 text-4xl top-0 left-4 -translate-y-1/2" />
               <Image
-                src="/hero-bg.png"
+                src="/Me2.jpg"
                 alt="Chris Daniels"
                 width={80}
                 height={80}

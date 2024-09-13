@@ -15,7 +15,7 @@ const Features: React.FC = () => {
         data-aos="fade-up"
         data-aos-duration="1200"
       >
-        <h2 className="text-3xl lg:text-4xl font-bold mb-8">
+        <h2 className="text-3xl lg:text-4xl text-indigo-600 font-bold mb-8">
           Why Choose Elite X?
         </h2>
 
