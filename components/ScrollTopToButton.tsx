@@ -8,7 +8,7 @@ const ScrollToTopButton: React.FC = () => {
     const handleScroll = () => {
       const scrollPosition = window.innerHeight + window.scrollY;
       const documentHeight = document.documentElement.scrollHeight;
-      const threshold = 400;
+      const threshold = 1000;
 
       if (scrollPosition >= documentHeight - threshold) {
         setIsVisible(true);

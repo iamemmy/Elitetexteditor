@@ -9,7 +9,7 @@ import GuidePrompt from "../components/GuidePrompt"; // Import the new component
 
 const Home: React.FC = () => {
   return (
-    <div className="flex flex-col h-screen bg-gray-100">
+    <div className="overflow-x-hidden">
       <Navbar />
       <main className="flex-grow">
         <Hero />
@@ -18,7 +18,7 @@ const Home: React.FC = () => {
       </main>
       <GuidePrompt />
       <Footer />
-      
+
       <ScrollToTopButton />
     </div>
   );

@@ -64,7 +64,7 @@
 
 /* Container for slider */
 .slider-container {
-  padding: 0 20px; /* Adjust as needed */
+  padding: 0 20px;
 }
 
 /* Slider track styling */
@@ -78,12 +78,11 @@
   justify-content: center;
 }
 
-/* Ensure there’s spacing between slides */
+/* Spacing between the slides */
 .slick-slide > div {
-  margin: 0 10px; /* Adjust as needed */
+  margin: 0 10px;
 }
 
-/* Add this to your global CSS file or relevant CSS module */
 .slider-container {
   position: relative;
 }
@@ -99,28 +98,26 @@
 }
 
 .slick-prev {
-  left: 16px; /* Adjust as needed */
+  left: 16px;
 }
 
 .slick-next {
-  right: 16px; /* Adjust as needed */
+  right: 16px;
 }
 
 .slick-prev::before,
 .slick-next::before {
-  display: none; /* Hide default arrows */
+  display: none;
 }
 
-/* Global or module CSS file */
-
-/* General styles for arrows */
+/* Styles for arrows */
 .arrow {
-  background: rgba(99, 102, 241, 0.8); /* Indigo-600 with transparency */
+  background: rgba(99, 102, 241, 0.8); /*  transparent Indigo-600 */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white; /* Arrow color */
+  color: white;
   transition: background-color 0.3s ease, transform 0.3s ease,
     box-shadow 0.3s ease; /* Smooth transitions */
 }
@@ -145,12 +142,10 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow on click */
 }
 
-/* globals.css */
-
 /* Style the default dots with increased specificity */
 .slick-dots li button:before {
   color: #4f46e5 !important; /* Indigo-600 color */
-  font-size: 10px !important; /* Adjust the size if needed */
+  font-size: 10px !important;
 }
 
 /* Style the active dot with increased specificity */

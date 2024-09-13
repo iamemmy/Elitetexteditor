@@ -9,7 +9,7 @@ const Features: React.FC = () => {
   }, []);
 
   return (
-    <section className="bg-gray-100 py-16">
+    <section className="bg-gray-100 py-16 px-4">
       <div
         className="container mx-auto text-center"
         data-aos="fade-up"
