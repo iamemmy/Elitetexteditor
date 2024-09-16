@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
           className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8"
           data-aos="fade-up"
         >
-          <div className="flex flex-col items-center text-center md:items-start">
+          <div className="flex flex-col items-center text-center md:text-left md:items-start">
             <h4 className="text-3xl font-bold mb-2">Elite X</h4>
             <p className="text-gray-200">
               Empowering your productivity with cutting-edge tools and seamless
@@ -28,10 +28,10 @@ const Footer: React.FC = () => {
             </p>
           </div>
 
-          <div className="text-center">
-            <h4 className="text-xl font-bold mb-2 ">Company</h4>
+          <div className="text-center md:text-left">
+            <h4 className="text-xl font-bold mb-2">Company</h4>
             <div className="mt-4">
-              <h5 className="text-lg  mb-2">
+              <h5 className="text-lg mb-2">
                 <a href="/about" className="hover:text-indigo-400">
                   About Us
                 </a>
@@ -40,8 +40,8 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="text-center">
-            <h4 className="text-xl text-center font-bold mb-2">Contact Us</h4>
+          <div className="text-center md:text-left">
+            <h4 className="text-xl font-bold mb-2">Contact Us</h4>
             <p className="text-gray-200 mb-4">
               <a href="tel:+1234567890" className="hover:text-indigo-400">
                 +1 (234) 567-890
@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
             </p>
           </div>
 
-          <div className="text-center">
+          <div className="text-center md:text-left">
             <h4 className="text-xl font-bold mb-2">Quick Links</h4>
             <div className="flex flex-col md:flex-row md:justify-between mb-4">
               <a href="#" className="my-1 hover:text-indigo-400">
@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
                 Terms of Service
               </a>
             </div>
-            <div className="flex flex-row md:flex-row md:justify-between items-center justify-center">
+            <div className="flex flex-wrap justify-center md:justify-start">
               <a href="#" className="mx-2 text-2xl hover:text-indigo-400">
                 <FaFacebookF />
               </a>
