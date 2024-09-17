@@ -22,7 +22,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen }) => {
           <Link href="/guide">Guide</Link>
         </li>
         <li className="hover:bg-gray-300 lg:hover:bg-indigo-500 px-4 py-2 rounded-md cursor-pointer text-lg transition duration-300">
-          <Link href="/guide">Pricing</Link>
+          <Link href="/pricing">Pricing</Link>
         </li>
         <li className="hover:bg-gray-300 lg:hover:bg-indigo-500 px-4 py-2 rounded-md cursor-pointer text-lg transition duration-300">
           <Link href="/contact">Contact</Link>
