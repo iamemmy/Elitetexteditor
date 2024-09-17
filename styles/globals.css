@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .quill-editor-container {
   overflow: hidden;
-  -webkit-box-shadow: 0px 11px 21px -20px rgba(0,0,0,0.54);
-  -moz-box-shadow: 0px 11px 21px -20px rgba(0,0,0,0.54);
-  box-shadow: 0px 11px 21px -20px rgba(0,0,0,0.54);
+  -webkit-box-shadow: 0px 11px 21px -20px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 0px 11px 21px -20px rgba(0, 0, 0, 0.54);
+  box-shadow: 0px 11px 21px -20px rgba(0, 0, 0, 0.54);
   padding: 0;
   border-radius: 4px;
 }
@@ -61,4 +60,95 @@
 
 .access-btn {
   margin-top: auto !important;
+}
+
+/* Container for slider */
+.slider-container {
+  padding: 0 20px;
+}
+
+/* Slider track styling */
+.slick-track {
+  display: flex;
+}
+
+/* Styling for each slide */
+.slick-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* Spacing between the slides */
+.slick-slide > div {
+  margin: 0 10px;
+}
+
+.slider-container {
+  position: relative;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 10;
+}
+
+.slick-prev {
+  left: 16px;
+}
+
+.slick-next {
+  right: 16px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  display: none;
+}
+
+/* Styles for arrows */
+.arrow {
+  background: rgba(99, 102, 241, 0.8); /*  transparent Indigo-600 */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect */
+.arrow:hover {
+  background: rgba(
+    99,
+    102,
+    241,
+    1
+  ); /* Change background to fully opaque on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add a more noticeable shadow on hover */
+  /* transform: scale(1.1);  */
+  /* Slightly enlarge on hover */
+}
+
+/* Click effect */
+.arrow:active {
+  background: rgba(99, 102, 241, 0.6); /* Darker background on click */
+  transform: scale(0.95); /* Slightly shrink on click */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow on click */
+}
+
+/* Style the default dots with increased specificity */
+.slick-dots li button:before {
+  color: #4f46e5 !important; /* Indigo-600 color */
+  font-size: 10px !important;
+}
+
+/* Style the active dot with increased specificity */
+.slick-dots li.slick-active button:before {
+  color: #4f46e5 !important; /* Indigo-700 or a darker shade for active dot */
 }
