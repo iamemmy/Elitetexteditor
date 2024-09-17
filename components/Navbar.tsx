@@ -1,69 +1,62 @@
-import Link from "next/link";
-import { useState, useEffect } from "react";
-import Sidebar from "./Sidebar";
+import Link from 'next/link'
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux';
+import { setIsMenuOpen } from '../ReduxStore/Slice';
+import { RootState } from '../ReduxStore/store';
 
-const Navbar: React.FC = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
-  const [scrollingDown, setScrollingDown] = useState<boolean>(false);
-  const [lastScrollTop, setLastScrollTop] = useState<number>(0);
+export default function Index() {
+  const dispatch = useDispatch();
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+  const { isMenuOpen } = useSelector((state: RootState) => state.example);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollTop = window.pageYOffset;
-      if (currentScrollTop > lastScrollTop) {
-        setScrollingDown(true);
-      } else {
-        setScrollingDown(false);
-      }
-      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
-    };
+  const openMenu = () => {
+    dispatch(setIsMenuOpen(true));
+  }
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollTop]);
+  const closeMenu = () => {
+    dispatch(setIsMenuOpen(false));
+  }
+
+  const handleMenuItemClick = () => {
+    if (isMenuOpen) {
+      closeMenu();
+    }
+  }
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full bg-indigo-600 text-white px-4 py-0 lg:px-4 lg:py-0 shadow-md flex items-center justify-between z-50 h-16 transition-transform duration-300 ${
-        scrollingDown ? "top-[-100px]" : "top-0"
-      }`}
-      data-aos="fade-down"
-    >
-      <h1 className="text-xl lg:text-2xl font-semibold">Elite X</h1>
-      <button
-        className="lg:hidden text-white"
-        onClick={toggleSidebar}
-        aria-label="Toggle Sidebar"
+    <nav className='relative flex justify-between items-center py-6 px-4 lg:px-8 shadow-md bg-indigo-600 text-white'>
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        fill="none" viewBox="0 0 24 24" 
+        strokeWidth="1.5" stroke="currentColor" 
+        className="w-6 h-6 block lg:hidden"
+        onClick={openMenu}
       >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+      <h2 className='font-bold'>VeeMart</h2>
+      <ul className={`list-none flex flex-col lg:flex-row justify-center items-center lg:space-x-3 space-y-4 lg:space-y-0 absolute ${isMenuOpen ? "left-0" : "-left-[120%] lg:left-auto"} transition-all top-0 w-full lg:w-auto lg:relative bg-indigo-700 lg:h-auto h-[100vh] lg:bg-transparent z-40 lg:z-auto`}>
+        <li onClick={handleMenuItemClick}><Link href={"/"}>Home</Link></li>
+        <li onClick={handleMenuItemClick}><Link href={"/about"}>About</Link></li>
+        <li onClick={handleMenuItemClick}><Link href={"/pricing"}>Pricing</Link></li>
+        <li onClick={handleMenuItemClick}><Link href={"/contact"}>Contact</Link></li>
+        <li onClick={handleMenuItemClick}><Link href={"/guide"}>Guide</Link></li>
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          fill="none" viewBox="0 0 24 24" 
+          strokeWidth="1.5" stroke="currentColor" 
+          className="w-6 h-6 lg:hidden block absolute z-50 top-6 right-8"
+          onClick={closeMenu}
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16m-7 6h7"
-          ></path>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>
-      </button>
-
-      <Sidebar isSidebarOpen={isSidebarOpen} />
-      <Link
-        href="/dashboard"
-        className="mt-0 hidden lg:block bg-indigo-600 text-white text-sm hover:bg-indigo-700 border border-indigo-200 px-4 py-2 rounded-md transition duration-300"
+      </ul>
+      <Link 
+        href="/dashboard" 
+        className="flex items-center justify-center border border-white rounded-full w-10 h-10 bg-gray-800 text-white font-bold text-xl"
       >
-        Dashboard
+        S
       </Link>
-    </header>
-  );
-};
-
-export default Navbar;
+    </nav>
+  )
+}

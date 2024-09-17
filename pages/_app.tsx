@@ -9,6 +9,9 @@ import { useEffect } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
 
+import { Provider } from "react-redux";  // Import Provider
+import store from '../ReduxStore/store';  // Import your Redux store
+
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     AOS.init({
@@ -17,5 +20,9 @@ export default function App({ Component, pageProps }: AppProps) {
     });
   }, []);
 
-  return <Component {...pageProps} />;
+  return (
+    <Provider store={store}>  {/* Wrap the component in Provider */}
+      <Component {...pageProps} />
+    </Provider>
+  );
 }
