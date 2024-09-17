@@ -1,6 +1,7 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { CheckIcon } from '@heroicons/react/20/solid'
+import { GetStaticProps, GetStaticPropsContext } from 'next';
 
 const tiers = [
     {
@@ -37,12 +38,12 @@ function Pricing() {
             <div className="mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8">
               <div className="mx-auto max-w-4xl">
                 <h2 className="text-base font-semibold leading-7 text-indigo-400">Pricing</h2>
-                <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+                <p className="mt-2 text-2xl lg:text-4xl font-bold tracking-tight text-white sm:text-5xl">
                 Affordable Plans for Students, Freelancers, and Agencies
                 </p>
               </div>
               <div className="relative mt-6">
-                <p className="mx-auto max-w-2xl text-lg leading-8 text-white">
+                <p className="mx-auto max-w-2xl text-base lg:text-lg leading-8 text-white">
                 adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
                 </p>
                 <svg
@@ -120,14 +121,12 @@ function Pricing() {
     );
 }
 
-export async function getStaticProps(ctx){
-
-
-    return {
-        props:{
-            data:null
-        }
-    }
-}
+export const getStaticProps: GetStaticProps = async (ctx: GetStaticPropsContext) => {
+  return {
+    props: {
+      data: null,
+    },
+  };
+};
 
 export default Pricing;

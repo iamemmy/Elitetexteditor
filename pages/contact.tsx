@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useState } from "react";
+import { GetStaticProps, GetStaticPropsContext } from 'next';
 
 export default function Contact() {
 
@@ -26,12 +27,12 @@ export default function Contact() {
                     <div className="mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8">
                         <div className="mx-auto max-w-4xl">
                             <h2 className="text-base font-semibold leading-7 text-indigo-400">Contact Us</h2>
-                            <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+                            <p className="mt-2 text-2xl lg:text-4xl font-bold tracking-tight text-white sm:text-5xl">
                             Have Questions? We&apos;re Here to Help!
                             </p>
                         </div>
                         <div className="relative mt-6">
-                            <p className="mx-auto max-w-2xl text-lg leading-8 text-white">
+                            <p className="mx-auto max-w-2xl text-base lg:text-lg leading-8 text-white">
                             Whether you&apos;re a student looking to build your portfolio, a freelancer seeking clients, or an agency ready to scale, we&apos;d love to hear from you.
                             </p>
                             <svg
@@ -133,12 +134,10 @@ export default function Contact() {
 }
 
 
-export async function getStaticProps(ctx){
-
-
+export const getStaticProps: GetStaticProps = async (ctx: GetStaticPropsContext) => {
     return {
-        props:{
-            data:null
-        }
-    }
-}
+      props: {
+        data: null,
+      },
+    };
+  };

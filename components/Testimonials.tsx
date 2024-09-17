@@ -55,84 +55,58 @@ const Testimonials: React.FC = () => {
     </div>
   );
 
+  const testimonials = [
+    {
+      name: "Alex Johnson",
+      image: "/Me.png",
+      text: "Elite X has transformed the way we work. The real-time collaboration is a game-changer!",
+    },
+    {
+      name: "Jamie Lee",
+      image: "/hero-bg.png",
+      text: "I love how customizable the editor is. It feels like it was made just for me.",
+    },
+    {
+      name: "Chris Daniels",
+      image: "/Me2.jpg",
+      text: "The syntax highlighting is beautiful, and the interface is clean and intuitive.",
+    },
+  ];
+  
+
   return (
     <section className="bg-white py-16 mx-7">
       <div className="container mx-auto text-center">
         <h2
-          className="text-3xl lg:text-4xl font-bold mb-8 text-indigo-600"
+          className="text-2xl lg:text-4xl font-bold mb-8 text-indigo-600"
           data-aos="fade-up"
         >
           What Our Users Are Saying
         </h2>
         <Slider {...settings} className="slider-container">
-          <div
-            className="p-6 py-10 bg-indigo-100 rounded-lg shadow-lg hover:bg-indigo-200 transition duration-300"
-            data-aos="fade-up"
-          >
-            <div className="relative mb-4">
-              <FaQuoteLeft className="absolute text-indigo-500 text-4xl top-0 left-4 -translate-y-1/2" />
-              <Image
-                src="/Me.png"
-                alt="Alex Johnson"
-                width={80}
-                height={80}
-                className="mx-auto mb-4 w-20 h-20 rounded-full object-cover"
-              />
-              {/* <FaQuoteRight className="absolute text-indigo-500 text-4xl bottom-0 right-4 translate-y-1/2" /> */}
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="p-6 py-10 bg-indigo-100 rounded-lg shadow-lg hover:bg-indigo-200 transition duration-300"
+              data-aos="fade-up"
+            >
+              <div className="relative mb-4">
+                <FaQuoteLeft className="absolute text-indigo-500 text-4xl top-0 left-4 -translate-y-1/2" />
+                <Image
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  width={80}
+                  height={80}
+                  className="mx-auto mb-4 w-20 h-20 rounded-full object-cover"
+                />
+              </div>
+              <p className="text-gray-700 mb-4">
+                "{testimonial.text}"
+              </p>
+              {stars}
+              <h4 className="text-lg:lg:text-xl font-semibold">- {testimonial.name}</h4>
             </div>
-            <p className="text-gray-700 mb-4">
-              "Elite X has transformed the way we work. The real-time
-              collaboration is a game-changer!"
-            </p>
-            {stars}
-            <h4 className="text-xl font-semibold">- Alex Johnson</h4>
-          </div>
-
-          <div
-            className="p-6 py-10 bg-indigo-100 rounded-lg shadow-lg hover:bg-indigo-200 transition duration-300"
-            data-aos="fade-up"
-          >
-            <div className="relative mb-4">
-              <FaQuoteLeft className="absolute text-indigo-500 text-4xl top-0 left-4 -translate-y-1/2" />
-              <Image
-                src="/hero-bg.png"
-                alt="Jamie Lee"
-                width={80}
-                height={80}
-                className="mx-auto mb-4 w-20 h-20 rounded-full object-cover"
-              />
-              {/* <FaQuoteRight className="absolute text-indigo-500 text-4xl bottom-0 right-4 translate-y-1/2" /> */}
-            </div>
-            <p className="text-gray-700 mb-4">
-              "I love how customizable the editor is. It feels like it was made
-              just for me."
-            </p>
-            {stars}
-            <h4 className="text-xl font-semibold">- Jamie Lee</h4>
-          </div>
-
-          <div
-            className="p-6 py-10 bg-indigo-100 rounded-lg shadow-lg hover:bg-indigo-200 transition duration-300"
-            data-aos="fade-up"
-          >
-            <div className="relative mb-4">
-              <FaQuoteLeft className="absolute text-indigo-500 text-4xl top-0 left-4 -translate-y-1/2" />
-              <Image
-                src="/Me2.jpg"
-                alt="Chris Daniels"
-                width={80}
-                height={80}
-                className="mx-auto mb-4 w-20 h-20 rounded-full object-cover"
-              />
-              {/* <FaQuoteRight className="absolute text-indigo-500 text-4xl bottom-0 right-4 translate-y-1/2" /> */}
-            </div>
-            <p className="text-gray-700 mb-4">
-              "The syntax highlighting is beautiful, and the interface is clean
-              and intuitive."
-            </p>
-            {stars}
-            <h4 className="text-xl font-semibold">- Chris Daniels</h4>
-          </div>
+          ))}
         </Slider>
       </div>
     </section>

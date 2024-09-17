@@ -120,6 +120,10 @@
   color: white;
   transition: background-color 0.3s ease, transform 0.3s ease,
     box-shadow 0.3s ease; /* Smooth transitions */
+
+  padding: 5px !important;
+  width: 40px !important;
+  height: 40px !important;
 }
 
 /* Hover effect */
@@ -142,13 +146,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow on click */
 }
 
-/* Style the default dots with increased specificity */
-.slick-dots li button:before {
-  color: #4f46e5 !important; /* Indigo-600 color */
-  font-size: 10px !important;
-}
-
-/* Style the active dot with increased specificity */
-.slick-dots li.slick-active button:before {
-  color: #4f46e5 !important; /* Indigo-700 or a darker shade for active dot */
+.slick-dots {
+  display: none !important;
 }
