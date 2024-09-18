@@ -35,7 +35,7 @@ export default function Navbar() {
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
       </svg>
       <h2 className='font-bold'>Elite X</h2>
-      <ul className={`list-none flex flex-col lg:flex-row justify-center items-center lg:space-x-3 space-y-4 lg:space-y-0 absolute ${isMenuOpen ? "left-0" : "-left-[120%] lg:left-auto"} transition-all top-0 w-full lg:w-auto lg:relative bg-indigo-700 lg:h-auto h-[100vh] lg:bg-transparent z-40 lg:z-auto`}>
+      <ul className={`list-none flex flex-col lg:flex-row justify-center items-center lg:space-x-3 space-y-4 lg:space-y-0 absolute ${isMenuOpen} ? "left-0" : "-left-[120%] lg:left-auto"} transition-all top-0 w-full lg:w-auto lg:relative bg-indigo-700 lg:h-auto h-[100vh] lg:bg-transparent z-40 lg:z-auto`}>
         <li onClick={handleMenuItemClick}><Link href={"/"}>Home</Link></li>
         <li onClick={handleMenuItemClick}><Link href={"/about"}>About</Link></li>
         <li onClick={handleMenuItemClick}><Link href={"/pricing"}>Pricing</Link></li>
