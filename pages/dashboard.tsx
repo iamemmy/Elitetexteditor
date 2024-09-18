@@ -1,12 +1,31 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Dashboard from '../components/Dashboard';
+import { signOut, onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../lib/firebase';
+import { useRouter } from 'next/router';
+import protectRoute from '../lib/protectRoute';
 
 const Home: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const router = useRouter();
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      console.log("Logged out successfully!");
+
+      setTimeout(() => {
+        router.push('/authentication');
+      }, 3000);
+      
+    } catch (error) {
+      console.error("Error logging out:", error);
+    }
   };
 
   return (
@@ -56,6 +75,7 @@ const Home: React.FC = () => {
 
           <button 
             className="mt-auto access-btn bg-red-600 text-white text-sm hover:bg-red-700 px-4 py-2 rounded-md transition duration-300"
+            onClick={handleLogout}
           >
             Logout
           </button>
@@ -69,4 +89,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default protectRoute(Home);

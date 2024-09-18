@@ -19,7 +19,7 @@ const AuthPage: React.FC = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="flex flex-col items-center justify-center min-h-[90vh] bg-gray-100">
         {isSignUp ? <SignUpForm /> : <LoginForm />}
         <div className="text-center">

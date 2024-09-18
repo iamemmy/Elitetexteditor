@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Button animation css */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
 .quill-editor-container {
   overflow: hidden;
   -webkit-box-shadow: 0px 11px 21px -20px rgba(0, 0, 0, 0.54);
