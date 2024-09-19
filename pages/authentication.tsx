@@ -1,17 +1,51 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import LoginForm from '../components/Login';
-import SignUpForm from '../components/Signup';
-import Navbar from '../components/Navbar';
+// import React, { useState } from "react";
+// import Link from "next/link";
+// import LoginForm from "../components/Login";
+// import SignUpForm from "../components/Signup";
+// import Navbar from "../components/Navbar";
+
+// const AuthPage: React.FC = () => {
+//   const [isSignUp, setIsSignUp] = useState(false);
+//   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+//   const toggleSidebar = () => {
+//     console.log("clicked!");
+//     setIsSidebarOpen(!isSidebarOpen);
+//   };
+
+//   const toggleMode = () => {
+//     setIsSignUp(!isSignUp);
+//   };
+
+//   return (
+//     <>
+//       {/* <Navbar /> */}
+//       <div className="flex flex-col items-center justify-center min-h-[100vh] bg-gray-100">
+//         {isSignUp ? <SignUpForm /> : <LoginForm />}
+//         <div className="text-center">
+//           <button
+//             onClick={toggleMode}
+//             className="mt-4 text-[#3f86cd] hover:underline"
+//           >
+//             {isSignUp
+//               ? "Already have an account? Login"
+//               : "Don't have an account? Sign Up"}
+//           </button>
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
+// export default AuthPage;
+
+import React, { useState } from "react";
+import LoginForm from "../components/Login";
+import SignUpForm from "../components/Signup";
+import GoBackButton from "../components/GoBackButton";
 
 const AuthPage: React.FC = () => {
   const [isSignUp, setIsSignUp] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    console.log('clicked!');
-    setIsSidebarOpen(!isSidebarOpen);
-  };
 
   const toggleMode = () => {
     setIsSignUp(!isSignUp);
@@ -19,15 +53,17 @@ const AuthPage: React.FC = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
-      <div className="flex flex-col items-center justify-center min-h-[90vh] bg-gray-100">
+      <div className="flex flex-col items-center justify-center min-h-[100vh] bg-gray-100 relative">
+        <GoBackButton fallbackUrl="/" /> {/* Use fallbackUrl if needed */}
         {isSignUp ? <SignUpForm /> : <LoginForm />}
         <div className="text-center">
           <button
             onClick={toggleMode}
-            className="mt-4 text-indigo-600 hover:underline"
+            className="mt-4 text-[#003366] hover:text-[#21578e] hover:underline"
           >
-            {isSignUp ? 'Already have an account? Login' : "Don't have an account? Sign Up"}
+            {isSignUp
+              ? "Already have an account? Login"
+              : "Don't have an account? Sign Up"}
           </button>
         </div>
       </div>
