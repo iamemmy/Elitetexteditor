@@ -82,10 +82,10 @@ const Hero: React.FC = () => {
 
       {/* Image Section */}
       <div
-        className="relative flex flex-none w-full lg:w-[53%] items-center justify-center mt-8 lg:mt-0 order-2 lg:order-2"
-        data-aos="zoom-in"
-        data-aos-duration="800"
-        data-aos-delay="700"
+        className="relative flex flex-none w-full lg:w-[53%] items-center justify-center mt-3 lg:mt-0 order-2 lg:order-2"
+        // data-aos="zoom-in"
+        // data-aos-duration="800"
+        // data-aos-delay="700"
       >
         <Image
           src="/hero2.png"
