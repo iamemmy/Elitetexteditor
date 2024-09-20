@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaCheckCircle } from "react-icons/fa";
+import { CheckCircleIcon } from '@heroicons/react/24/outline';
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -29,9 +29,9 @@ const Hero: React.FC = () => {
             data-aos-duration="500"
             data-aos-delay="300"
           >
-            <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 leading-tight text-slate-700">
-              Unleash Your Creativity with <br />
-              <span className="text-[#4082c4]">Elite X Text Editor</span>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 leading-tight text-slate-700">
+              Unleash Your Creativity with
+              <span className="text-[#4082c4]"> Elite X Text Editor</span>
             </h1>
             <p className="text-base md:text-lg lg:text-xl xl:text-2xl">
               The ultimate text editing tool designed for productivity,
@@ -41,29 +41,29 @@ const Hero: React.FC = () => {
 
           {/* Feature List */}
           <div className=" lg:block mt-4 lg:mt-9 text-left">
-            <ul
-              className="text-gray-700 space-y-4 text-base md:text-lg lg:text-xl"
-              data-aos="fade-in"
-              data-aos-duration="800"
-              data-aos-delay="500"
-            >
-              <li className="flex items-center">
-                <FaCheckCircle className="text-[#27619a] mr-3 text-xl" />
-                Real-time Collaboration for seamless teamwork.
-              </li>
-              <li className="flex items-center">
-                <FaCheckCircle className="text-[#27619a] mr-3 text-xl" />
-                Customizable Themes to suit your style.
-              </li>
-              <li className="flex items-center">
-                <FaCheckCircle className="text-[#27619a] mr-3 text-xl" />
-                Powerful Editing Tools for enhanced productivity.
-              </li>
-              <li className="flex items-center">
-                <FaCheckCircle className="text-[#27619a] mr-3 text-xl" />
-                Flexible Settings to tailor your experience.
-              </li>
-            </ul>
+          <ul
+            className="flex flex-col justify-center items-start text-gray-700 space-y-4 text-base md:text-lg lg:text-xl"
+            data-aos="fade-in"
+            data-aos-duration="800"
+            data-aos-delay="500"
+          >
+            <li className="flex justify-center items-start space-x-3">
+              <CheckCircleIcon className="w-6 h-6 text-[#27619a]" />
+              <p className="text-sm lg:text-base">Real-time Collaboration for seamless teamwork.</p>
+            </li>
+            <li className="flex justify-center items-start space-x-3">
+              <CheckCircleIcon className="w-6 h-6 text-[#27619a]" />
+              <p className="text-sm lg:text-base">Customizable Themes to suit your style.</p>
+            </li>
+            <li className="flex justify-center items-start space-x-3">
+              <CheckCircleIcon className="w-6 h-6 text-[#27619a]" />
+              <p className="text-sm lg:text-base">Powerful Editing Tools for enhanced productivity.</p>
+            </li>
+            <li className="flex justify-center items-start space-x-3">
+              <CheckCircleIcon className="w-6 h-6 text-[#27619a]" />
+              <p className="text-sm lg:text-base">Flexible Settings to tailor your experience.</p>
+            </li>
+          </ul>
           </div>
 
           <div className="mt-8 lg:mt-12">
