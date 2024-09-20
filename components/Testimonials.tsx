@@ -324,6 +324,7 @@ const Testimonials: React.FC = () => {
               key={index}
               className="p-6 py-10 bg-gradient-to-r hover:bg-gradient-to-r hover:from-[#324f6a] hover:to-[#5d99d2] from-[#d8dee4] to-[#6591bc]  rounded-lg shadow-lg hover:bg-[#4d7fb2] hover:text-white transition duration-300 group"
               data-aos="fade-up"
+              data-aos-duration="800"
             >
               <div className="relative mb-4">
                 <FaQuoteLeft className="absolute text-[#4082c4] text-4xl top-0 left-4 -translate-y-1/2 transition duration-300 group-hover:text-white" />

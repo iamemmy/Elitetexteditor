@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
       <div
         className="relative flex-1 flex flex-col items-center lg:items-start px-6 md:px-12 lg:px-16 py-8 lg:py-16 z-10 order-1 lg:order-1"
         data-aos="fade-up"
-        data-aos-duration="1500"
+        data-aos-duration="800"
         data-aos-delay="200"
         data-aos-easing="ease-in-out"
         data-aos-once="true"
@@ -26,10 +26,10 @@ const Hero: React.FC = () => {
           <div
             className="text-gray-900 mb-4"
             data-aos="slide-up"
-            data-aos-duration="1200"
+            data-aos-duration="500"
             data-aos-delay="300"
           >
-            <h1 className="text-[35px] md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 leading-tight text-slate-700">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 leading-tight text-slate-700">
               Unleash Your Creativity with <br />
               <span className="text-[#4082c4]">Elite X Text Editor</span>
             </h1>
@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
             <ul
               className="text-gray-700 space-y-4 text-base md:text-lg lg:text-xl"
               data-aos="fade-in"
-              data-aos-duration="1200"
+              data-aos-duration="800"
               data-aos-delay="500"
             >
               <li className="flex items-center">
@@ -70,9 +70,9 @@ const Hero: React.FC = () => {
             <Link
               href="/authentication"
               className="inline-block px-4  w-full md:w-[200px]  text-center lg:px-6 py-3 text-lg font-medium text-white  bg-gradient-to-r from-[#003366] to-[#1e69b5] bg-[#2465a5] hover:bg-[#21578e]  rounded-md shadow-lg  transition duration-300"
-              data-aos="zoom-in"
-              data-aos-duration="1000"
-              data-aos-delay="600"
+              // data-aos="zoom-in"
+              // data-aos-duration="800"
+              // data-aos-delay="600"
             >
               Get Started
             </Link>
@@ -82,9 +82,9 @@ const Hero: React.FC = () => {
 
       {/* Image Section */}
       <div
-        className="relative hidden lg:flex flex-none w-full lg:w-[53%] items-center justify-center mt-8 lg:mt-0 order-2 lg:order-2"
+        className="relative flex flex-none w-full lg:w-[53%] items-center justify-center mt-8 lg:mt-0 order-2 lg:order-2"
         data-aos="zoom-in"
-        data-aos-duration="1500"
+        data-aos-duration="800"
         data-aos-delay="700"
       >
         <Image

@@ -17,6 +17,7 @@ const GuidePrompt: React.FC = () => {
       <p
         className="text-white text-2xl lg:text-4xl mb-8 lg:mb-12"
         data-aos="fade-up"
+        data-aos-duration="800"
       >
         Not sure how to use this Elite X Text Editor? <br />
         Our guide can help you get started in no time.

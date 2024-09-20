@@ -18,7 +18,6 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6">
         <div
           className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8"
-          data-aos="fade-up"
         >
           <div className="flex flex-col items-center text-center md:text-left md:items-start">
             <h4 className="text-3xl font-bold mb-2">Elite X</h4>

@@ -15,7 +15,7 @@ const Features: React.FC = () => {
       <div
         className="container mx-auto text-center"
         data-aos="fade-up"
-        data-aos-duration="1200"
+        data-aos-duration="800"
       >
         <h2 className="text-2xl md:text-4xl lg:text-5xl md:pt-6 md:pb-10 text-[#003366] font-bold mb-8">
           Why Choose Elite X?
@@ -26,7 +26,7 @@ const Features: React.FC = () => {
           <div
             className="group p-6 rounded-lg shadow-lg cursor-pointer hover:bg-gradient-to-r hover:from-[#84b5e3] hover:to-[#5d99d2] bg-gradient-to-r from-[#003366] to-[#1e69b5] bg-[#2465a5]  text-white transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:bg-white"
             data-aos="fade-up"
-            data-aos-duration="1200"
+            data-aos-duration="800"
             data-aos-delay="100"
           >
             <FaUsers className="h-10 w-10 md:h-12 md:w-12 mx-auto mb-4 text-white group-hover:text-[#003366]" />
@@ -43,7 +43,7 @@ const Features: React.FC = () => {
           <div
             className="group p-6 rounded-lg shadow-lg cursor-pointer hover:bg-gradient-to-r hover:from-[#84b5e3] hover:to-[#5d99d2] bg-gradient-to-r from-[#003366] to-[#1e69b5] bg-[#2465a5] text-white transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:bg-white"
             data-aos="fade-up"
-            data-aos-duration="1200"
+            data-aos-duration="800"
             data-aos-delay="200"
           >
             <FaCogs className="h-10 w-10 md:h-12 md:w-12 mx-auto mb-4 text-white group-hover:text-[#003366]" />
@@ -61,7 +61,7 @@ const Features: React.FC = () => {
           <div
             className="group p-6 rounded-lg shadow-lg cursor-pointer hover:bg-gradient-to-r hover:from-[#84b5e3] hover:to-[#5d99d2] bg-gradient-to-r from-[#003366] to-[#1e69b5] bg-[#2465a5] text-white transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:bg-white"
             data-aos="fade-up"
-            data-aos-duration="1200"
+            data-aos-duration="800"
             data-aos-delay="300"
           >
             <FaPalette className="h-10 w-10 md:h-12 md:w-12 mx-auto mb-4 text-white group-hover:text-[#003366]" />
@@ -79,7 +79,7 @@ const Features: React.FC = () => {
             // bg-[#2465a5]
             className="group p-6 rounded-lg shadow-lg cursor-pointer hover:bg-gradient-to-r hover:from-[#84b5e3] hover:to-[#5d99d2] bg-gradient-to-r from-[#003366] to-[#1e69b5] text-white transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl "
             data-aos="fade-up"
-            data-aos-duration="1200"
+            data-aos-duration="800"
             data-aos-delay="400"
           >
             <FaTools className="h-10 w-10 md:h-12 md:w-12 mx-auto mb-4 text-white group-hover:text-[#003366]" />
