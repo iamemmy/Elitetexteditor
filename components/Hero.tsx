@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative flex flex-col lg:flex-row h-auto lg:h-screen pt-16 md:mb-20 bg-white">
+    <section className="relative flex flex-col lg:flex-row h-auto lg:h-screen pt-20 lg:pt-28 md:mb-20 bg-white">
       {/* Content Section */}
       <div
         className="relative flex-1 flex flex-col items-center lg:items-start px-6 md:px-12 lg:px-16 py-8 lg:py-16 z-10 order-1 lg:order-1"
@@ -69,7 +69,6 @@ const Hero: React.FC = () => {
           <div className="mt-8 lg:mt-12">
             <Link
               href="/authentication"
-              // bg-[#003366]
               className="inline-block px-4  w-full md:w-[200px]  text-center lg:px-6 py-3 text-lg font-medium text-white  bg-gradient-to-r from-[#003366] to-[#1e69b5] bg-[#2465a5] hover:bg-[#21578e]  rounded-md shadow-lg  transition duration-300"
               data-aos="zoom-in"
               data-aos-duration="1000"

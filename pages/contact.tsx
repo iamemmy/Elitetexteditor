@@ -24,10 +24,10 @@ export default function Contact() {
     <div>
       <Navbar />
       <div>
-        <div className="isolate overflow-hidden bg-gray-900">
+        <div className="isolate overflow-hidden bg-gray-900 pt-12 lg:pt-16">
           <div className="mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8">
             <div className="mx-auto max-w-4xl">
-              <h2 className="text-base font-semibold leading-7 text-[#1e69b5] ">
+              <h2 className="text-base font-semibold leading-7 text-blue-400 ">
                 Contact Us
               </h2>
               <p className="mt-2 text-2xl lg:text-4xl font-bold tracking-tight text-white sm:text-5xl">

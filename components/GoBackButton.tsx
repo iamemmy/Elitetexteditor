@@ -25,7 +25,7 @@ const GoBackButton: React.FC<GoBackButtonProps> = ({
   return (
     <button
       onClick={handleGoBack}
-      className="absolute top-4 left-4 flex items-center space-x-2  hover:bg-gradient-to-r hover:from-[#234c72] hover:to-[#3b7cb8] bg-gradient-to-r from-[#003366] to-[#1e69b5] bg-[#2465a5] hover:bg-[#21578e] text-white font-semibold px-4 py-2 rounded-lg transition-colors shadow-md"
+      className="absolute top-4 left-4 flex items-center space-x-2  hover:bg-gradient-to-r hover:from-[#234c72] hover:to-[#3b7cb8] bg-gradient-to-r from-[#003366] to-[#1e69b5] bg-[#2465a5] hover:bg-[#21578e] text-white text-sm lg:text-base font-semibold px-4 py-2 rounded-lg transition-colors shadow-md"
     >
       {/* Custom Arrow Icon */}
       <svg

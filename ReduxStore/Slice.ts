@@ -4,12 +4,14 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 interface ExampleState {
   isMenuOpen: boolean;
   isStaticSidebar: boolean;
+  isSidebarOpen: boolean;
 }
 
 // Initial state with types
 const initialState: ExampleState = {
   isMenuOpen: false,
   isStaticSidebar: false,
+  isSidebarOpen: false,
 };
 
 // Create the slice with typed reducers
@@ -23,12 +25,15 @@ export const exampleSlice = createSlice({
     },
     setIsStaticSidebar: (state, action: PayloadAction<boolean>) => {
       state.isStaticSidebar = action.payload;
+    },
+    setIsSidebarOpen: (state, action: PayloadAction<boolean>) => {
+      state.isSidebarOpen = action.payload;
     }
   },
 });
 
 // Export actions
-export const { setIsMenuOpen, setIsStaticSidebar } = exampleSlice.actions;
+export const { setIsMenuOpen, setIsStaticSidebar, setIsSidebarOpen } = exampleSlice.actions;
 
 // Export reducer
 export default exampleSlice.reducer;

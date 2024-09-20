@@ -18,12 +18,12 @@ const Dashboard: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen">
+        <div className="w-full">
         <div className="max-w-6xl mx-auto">
             <div className="flex items-center justify-between mb-6">
-            <h1 className="text-xl font-semibold text-gray-500">Welcome, <span className='text-indigo-700'>Steph!</span></h1>
+            <h1 className="text-xl font-semibold text-gray-500">Welcome, <span className='text-blue-700'>Steph!</span></h1>
             <button
-                className="bg-indigo-600 text-white text-sm px-4 py-2 rounded-md flex items-center hover:bg-indigo-700 transition duration-300"
+                className="bg-blue-700 text-white text-sm px-4 py-2 rounded-md flex items-center hover:bg-blue-600 transition duration-300"
                 onClick={createNewDoc}
                 disabled={creatingDoc}
             >

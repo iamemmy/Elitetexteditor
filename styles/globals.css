@@ -8,9 +8,23 @@
   100% { transform: rotate(360deg); }
 }
 
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 .spinner {
   animation: spin 1s linear infinite;
 }
+
+.animate-progress {
+  animation: progress 2s linear forwards;
+}
+
 
 .quill-editor-container {
   overflow: hidden;
