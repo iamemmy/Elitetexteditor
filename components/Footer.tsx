@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <footer className="bg-indigo-600 text-white py-7">
+    <footer className="bg-gradient-to-r from-[#003366] to-[#1e69b5] bg-[#2465a5] text-white py-7">
       <div className="container mx-auto px-6">
         <div
           className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8"
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
         >
           <div className="flex flex-col items-center text-center md:text-left md:items-start">
             <h4 className="text-3xl font-bold mb-2">Elite X</h4>
-            <p className="text-gray-200">
+            <p className="text-gray-300">
               Empowering your productivity with cutting-edge tools and seamless
               integration.
             </p>
@@ -36,13 +36,13 @@ const Footer: React.FC = () => {
                   About Us
                 </a>
               </h5>
-              <p className="text-gray-200">Mission and values.</p>
+              <p className="text-gray-300">Mission and values.</p>
             </div>
           </div>
 
           <div className="text-center md:text-left">
             <h4 className="text-xl font-bold mb-2">Contact Us</h4>
-            <p className="text-gray-200 mb-4">
+            <p className="text-gray-300 mb-4">
               <a href="tel:+1234567890" className="hover:text-indigo-400">
                 +1 (234) 567-890
               </a>
@@ -87,9 +87,9 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-500 pt-6 mt-6">
+        <div className="border-t border-gray-600 pt-6 mt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-200 mb-4 md:mb-0">
+            <p className="text-gray-300 mb-4 md:mb-0">
               &copy; 2024 Elite X. All Rights Reserved.
             </p>
           </div>

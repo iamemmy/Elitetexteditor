@@ -17,7 +17,7 @@ export const PrevArrow: React.FC<ArrowProps> = ({
     style={{
       ...style,
       display: "block",
-      background: "rgba(99, 102, 241, 1)",
+      background: "rgba(64, 130, 196, 1)",
       borderRadius: "50%",
       width: "50px",
       height: "50px",
@@ -43,7 +43,7 @@ export const NextArrow: React.FC<ArrowProps> = ({
     style={{
       ...style,
       display: "block",
-      background: "rgba(99, 102, 241, 1)",
+      background: "rgba(64, 130, 196, 1)",
       borderRadius: "50%",
       width: "50px",
       height: "50px",

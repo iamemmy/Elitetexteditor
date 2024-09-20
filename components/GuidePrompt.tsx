@@ -12,7 +12,8 @@ const GuidePrompt: React.FC = () => {
   }, []);
 
   return (
-    <section className="bg-indigo-300 text-center py-20 px-4 lg:py-24 lg:px-8">
+    // bg-[#286db3]
+    <section className=" bg-gradient-to-r from-[#4d8bca] to-[#3781cc] bg-[#2465a5] text-center py-20 px-4 lg:py-24 lg:px-8">
       <p
         className="text-white text-2xl lg:text-4xl mb-8 lg:mb-12"
         data-aos="fade-up"
@@ -22,7 +23,7 @@ const GuidePrompt: React.FC = () => {
       </p>
       <Link
         href="/guide"
-        className="bg-indigo-600 text-white px-6 py-3 font-semibold rounded-md hover:bg-indigo-500 transition duration-300"
+        className=" text-white px-6 py-3 font-semibold rounded-md bg-gradient-to-r from-[#003366] to-[#1e69b5] bg-[#2465a5] hover:bg-indigo-500 transition duration-300"
         data-aos="zoom-in"
       >
         I’d love to read it now
